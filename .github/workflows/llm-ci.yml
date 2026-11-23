@@ -1,0 +1,18 @@
+name: llmops-quality-gate
+on:
+  pull_request:
+    paths: ["prompts/**", "results/**", "scripts/**"]
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -r requirements.txt
+      - name: Tests du gate
+        run: pytest -v
+      - name: Porte qualité (candidat vs baseline)
+        run: python scripts/eval_gate.py results/candidate.json baseline.json
+      - name: Build de l'image
+        run: docker build -t llmops-gate .

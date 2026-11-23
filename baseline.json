@@ -1,0 +1,8 @@
+{
+  "prompt_version": "support_v1",
+  "faithfulness": 0.92,
+  "answer_relevance": 0.88,
+  "hallucination_rate": 0.04,
+  "p95_latency_ms": 1200,
+  "cost_per_1k_requests_usd": 1.8
+}
