@@ -1,3 +1,6 @@
+> **Archived: this project now lives in [Qistas](https://github.com/Chaams/qistas)**, the quality gate for Arabic LLM applications, which uses a real LLM judge and is evaluated in CI.
+> This repository is kept read-only as the history of the work.
+
 # llmops-eval-pipeline
 
 Pipeline **LLMOps** : prompts versionnés, évaluation continue et **porte qualité** qui bloque le déploiement
